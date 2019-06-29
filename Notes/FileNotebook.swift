@@ -48,11 +48,8 @@ final class FileNotebook {
         defer { stream.close() }
         do {
             guard let notesJson = try JSONSerialization.jsonObject(with: stream, options: []) as? [[String: Any]] else { return }
-            let notesArray = notesJson.map({ Note.parse(json: $0) })
-            self.notes = Dictionary(uniqueKeysWithValues: notesArray.compactMap({
-                guard let note = $0 else { return nil }
-                return (note.uid, note)
-            }))
+            let notesArray = notesJson.compactMap({ Note.parse(json: $0) })
+            self.notes = Dictionary(uniqueKeysWithValues: notesArray.map({ ($0.uid, $0) }) )
         } catch {
             print(error)
         }
