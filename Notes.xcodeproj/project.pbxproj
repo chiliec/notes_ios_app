@@ -87,15 +87,13 @@
 		D1B04AC122C52A2F006963BD /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				D1B04AEC22C7DCB4006963BD /* Model */,
 				D1B04AC222C52A2F006963BD /* AppDelegate.swift */,
 				D1B04AC422C52A2F006963BD /* ViewController.swift */,
 				D1B04AC622C52A2F006963BD /* Main.storyboard */,
 				D1B04AC922C52A3D006963BD /* Assets.xcassets */,
 				D1B04ACB22C52A3D006963BD /* LaunchScreen.storyboard */,
 				D1B04ACE22C52A3D006963BD /* Info.plist */,
-				D1B04AE422C52A82006963BD /* Note.swift */,
-				D1B04AE622C52A9B006963BD /* NoteExtension.swift */,
-				D1B04AE822C5FA3E006963BD /* FileNotebook.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -109,6 +107,16 @@
 				D1B04AD922C52A3E006963BD /* Info.plist */,
 			);
 			path = NotesTests;
+			sourceTree = "<group>";
+		};
+		D1B04AEC22C7DCB4006963BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1B04AE422C52A82006963BD /* Note.swift */,
+				D1B04AE622C52A9B006963BD /* NoteExtension.swift */,
+				D1B04AE822C5FA3E006963BD /* FileNotebook.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
