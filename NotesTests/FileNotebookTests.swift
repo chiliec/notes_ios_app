@@ -38,7 +38,7 @@ class FileNotebookTests: XCTestCase {
             content: "Медвед",
             color: .red,
             importance: .important,
-            selfDestructionDate: Date()
+            selfDestructionDate: Date(timeIntervalSince1970: 1561828307)
         )
         notes[newNote.uid] = newNote
         XCTAssertNotEqual(notebook.notes, notes)
