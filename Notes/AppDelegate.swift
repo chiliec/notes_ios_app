@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        #if !APPSTORE
+            checkAppUpdate()
+        #endif
+        
         return true
     }
 
@@ -41,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    private func checkAppUpdate() {
+        print("Проверяем наличие новой версии приложения")
+        // TODO: реализовать проверку на наличие новой версии in-house приложения
+    }
 }
-
